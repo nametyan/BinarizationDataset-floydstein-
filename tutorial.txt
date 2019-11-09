@@ -1,0 +1,17 @@
+makedir.pyを実行する.
+
+変換元と変換先の画像の格納フォルダが生成される.
+
+生成された　C:\FSdata\BIGpicture　に画像を置く.
+
+trimming.pyを実行する.
+
+C:\FSdata\BIGpicture　の画像が任意のサイズに分割される.
+
+分割された画像は,　C:\FSdata\cutpicture　に保存される.
+
+main.pyを実行する.
+
+C:\FSdataset\cutpictureの画像が,フロイドスタインバーグ法によって二値化される.
+
+二値化された画像が,　C:\FSdataset\ditherd　に保存される.
