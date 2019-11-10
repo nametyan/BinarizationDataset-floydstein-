@@ -51,5 +51,5 @@ def floyd(file):
 if(__name__ == '__main__'):
     for fname in path:        
         output = floyd(fname)
-        cv2.imwrite(os.path.join(path2, str(datacount) + ".jpg"), output)#path2に画像を保存
+        cv2.imwrite(os.path.join(path2, "B_" + str(datacount) + ".jpg"), output)#path2に画像を保存
         datacount += 1
