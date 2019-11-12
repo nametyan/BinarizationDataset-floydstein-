@@ -9,10 +9,13 @@ import cv2
 import numpy as np
 import glob
 import os
+from natsort import natsorted
+from tqdm import tqdm
 
 s = 128#読み込む画像の縦横の長さ[pixel]
 path = glob.glob("C:/FSdata/cutpicture/*")#変換前の画像の格納フォルダ
 path2 = "C:/FSdata/ditherd"#変換後の画像の格納フォルダ
+truepath = natsorted(path)
 
 min_pix = 0#白の表示
 max_pix = 255#黒の表示
@@ -48,7 +51,7 @@ def floyd(file):
     return img_floyd
    
 if(__name__ == '__main__'):
-    for fname in path:        
+    for fname in truepath:
         output = floyd(fname)
         cv2.imwrite(os.path.join(path2, "B_" + str(datacount) + ".jpg"), output)#path2に画像を保存
         datacount += 1
